@@ -303,6 +303,18 @@ h2 {
   color: #202020;
 }
 
+p {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  color: #818AA3;
+  line-height: 1.6rem;
+}
+
+section h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: normal;
+}
+
 header {
   height: 100vh;
   display: -webkit-box;
@@ -422,7 +434,7 @@ nav .wrapper ul {
   padding: 0;
   list-style: none;
 }
-nav .wrapper a {
+nav .wrapper ul a {
   color: #202020;
   text-decoration: none;
   font-family: "Playfair Display", serif;
@@ -430,7 +442,7 @@ nav .wrapper a {
   transition: 0.3s all;
   position: relative;
 }
-nav .wrapper a::before {
+nav .wrapper ul a::before {
   position: absolute;
   content: "";
   left: -50px;
@@ -441,12 +453,21 @@ nav .wrapper a::before {
   -webkit-transition: width 0.3s;
   transition: width 0.3s;
 }
-nav .wrapper a:hover, nav .wrapper a:focus {
+nav .wrapper ul a:hover, nav .wrapper ul a:focus {
   color: #A23B72;
   margin-left: 30px;
 }
-nav .wrapper a:hover::before, nav .wrapper a:focus::before {
+nav .wrapper ul a:hover::before, nav .wrapper ul a:focus::before {
   width: 40px;
+}
+nav .wrapper .navFooter a {
+  text-decoration: none;
+  color: rgba(162, 59, 114, 0.7);
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
+  color: #A23B72;
 }
 
 .skipLink {
@@ -493,4 +514,75 @@ nav .wrapper a:hover::before, nav .wrapper a:focus::before {
 .socialLinks a:hover, .socialLinks a:focus {
   background-color: rgba(162, 59, 114, 0.4);
   color: #FFF;
+}
+
+.about .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 0;
+  height: 100vh;
+}
+.about .aboutMe, .about .toolKit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+.about .aboutMeLeftDiv, .about .aboutMeRightDiv {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  position: relative;
+  z-index: 1000;
+}
+.about .aboutMeRightDiv {
+  padding: 20px;
+}
+
+.toolKit {
+  border: 2px red solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.toolKitContainer ul {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  list-style: none;
+}
+.toolKitContainer li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px red solid;
+  width: 12.5%;
+}
+.toolKitContainer img {
+  border: 2px red solid;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 100%;
 }
