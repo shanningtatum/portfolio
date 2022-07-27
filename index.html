@@ -4,8 +4,125 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles.css" />
-    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/8dadeab0df.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>Shannon Tao | Front End Developer Portfolio</title>
   </head>
-  <body></body>
+  <body>
+    <!-- HEADER STARTS -->
+    <header>
+      <div class="wrapper">
+        <!-- NAV BAR START -->
+        <nav>
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#portfolio">Portfolio</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- NAV BAR END -->
+        <!-- SOCIAL LINKS STARTS -->
+        <div class="socialLinks">
+          <ul>
+            <li>
+              <a href="#">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- SOCIAL LINK ENDS -->
+        <div class="introDiv">
+          <h1>
+            Hello, I'm <span class="boldName">Shannon Tao</span>A Front-End Web
+            Developer in Toronto
+          </h1>
+        </div>
+      </div>
+    </header>
+    <!-- HEADER END-->
+    <!-- MAIN START -->
+    <main>
+      <!-- ABOUT SECTION STARTS -->
+      <section id="about" class="about">
+        <div class="wrapper">
+          <div class="aboutMe">
+            <h2>About Me</h2>
+          </div>
+          <div class="toolKit">
+            <h2>My Toolkit</h2>
+          </div>
+        </div>
+      </section>
+      <!-- ABOUT SECTION ENDS -->
+      <!-- PORTFOLIO SECTION STARTS -->
+      <section id="portfolio" class="portfolio">
+        <div class="wrapper">
+          <h2>Portfolio</h2>
+        </div>
+      </section>
+      <!-- PORTFOLIO SECTION ENDS -->
+      <!-- CONTACT SECTION STARTS -->
+      <section id="contact" class="contact">
+        <div class="wrapper">
+          <div class="contactHeader">
+            <h2>Let's Connect!</h2>
+          </div>
+          <div class="contactForm">
+            <form action="">
+              <fieldset>
+                <label for="userName">Full Name</label>
+                <input
+                  type="text"
+                  name="userName"
+                  placeholder="Your Name"
+                  required
+                />
+                <label for="subject">Subject (Optional)</label>
+                <input type="text" name="subject" placeholder="Your Subject" />
+                <label for="subject">Your Email</label>
+                <input
+                  type="email"
+                  name="subject"
+                  placeholder="Your E-mail"
+                  required
+                />
+                <label for="subject">Phone Number</label>
+                <input
+                  type="tel"
+                  name="subject"
+                  placeholder="+0 (000) 000 0000"
+                  required
+                />
+              </fieldset>
+              <button class="submitButton">Submit Now</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- CONTACT SECTION ENDS -->
+    </main>
+  </body>
 </html>
