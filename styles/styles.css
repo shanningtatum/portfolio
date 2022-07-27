@@ -220,3 +220,161 @@ template {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+html {
+  font-size: 125%;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 80%;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../../../fonts/PlayfairDisplay-Regular.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../fonts/PlayfairDisplay-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../../../fonts/Inter-Regular.ttf");
+  font-weight: normal;
+}
+h1 {
+  font-family: "Inter", sans-serif;
+  color: #A23B72;
+  font-size: 1.6rem;
+}
+
+.boldName {
+  display: block;
+  font-family: "Playfair Display", serif;
+  color: #202020;
+  font-size: 2.3rem;
+}
+
+.greyText {
+  color: #818AA3;
+}
+
+nav a {
+  font-size: 1rem;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  color: #202020;
+}
+
+header {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+header .wrapper {
+  max-width: none !important;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+header .headerRight {
+  position: absolute;
+  right: 0;
+  height: 100vh;
+  width: 85%;
+}
+
+nav {
+  position: fixed;
+  height: 100vh;
+  width: 15%;
+  background-color: #FFF;
+  border-right: 1px rgba(162, 59, 114, 0.3) solid;
+}
+nav .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+}
+nav .wrapper ul {
+  margin-top: 60%;
+  padding: 0;
+  list-style: none;
+}
+nav .wrapper li {
+  margin: 50px 10px;
+}
+nav .wrapper a {
+  color: #202020;
+  text-decoration: none;
+  font-family: "Playfair Display", serif;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+nav .wrapper a:hover, nav .wrapper a:focus {
+  color: #A23B72;
+  margin-left: 30px;
+}
+nav .wrapper a:hover:before, nav .wrapper a:focus:before {
+  width: 20px;
+}
+
+.skipLink {
+  display: none;
+}
+
+.socialLinks {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+.socialLinks ul {
+  list-style: none;
+  padding: 0;
+}
+.socialLinks li {
+  margin: 20px 20px;
+}
+.socialLinks a {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(162, 59, 114, 0.07);
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  color: #818AA3;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+}
+.socialLinks a:hover, .socialLinks a:focus {
+  background-color: rgba(162, 59, 114, 0.3);
+  color: #202020;
+}

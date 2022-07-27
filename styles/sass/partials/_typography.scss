@@ -1,0 +1,60 @@
+// Playfair Regular
+@font-face{
+    font-family:'Playfair Display';
+    src:url('../../../fonts/PlayfairDisplay-Regular.ttf');
+    font-weight:normal;
+}
+
+// Playfair Black
+// @font-face{
+//     font-family:'Playfair Display';
+//     src:url('../fonts/PlayfairDisplay-Black.ttf');
+//     font-weight:normal;
+// }
+
+// Playfair Bold
+@font-face{
+    font-family:'Playfair Display';
+    src:url('../fonts/PlayfairDisplay-Bold.ttf');
+    font-weight:bold;
+}
+
+// Inter
+@font-face{
+    font-family:'Inter';
+    src:url('../../../fonts/Inter-Regular.ttf');
+    font-weight:normal;
+}
+
+// FONT STYLES
+
+// HEADER DIV
+h1{
+    font-family:$sansSerifFont;
+    color:$purple;
+    font-size:1.6rem;
+}
+
+.boldName{
+    display:block;
+    font-family:$serifFont;
+    color:$black; 
+    font-size:2.3rem;
+}
+
+.greyText{
+    color:$grey;
+}
+
+// NAV BAR
+nav a {
+    font-size:1rem;
+}
+
+// SECTION HEADERS
+h2{
+    font-family:$serifFont;
+    color:$black;
+}
+
+
