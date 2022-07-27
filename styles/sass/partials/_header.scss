@@ -10,12 +10,61 @@ header{
     }
 
     .headerRight{
-        // background-color:$offWhite;
+        background-color:$offWhite;
         position: absolute;
+        display:flex;
+        justify-content:flex-end;
+        flex-direction:column;
+        // align-items:left;
         right:0;
         height:100vh;
         width:85%;
+    }
+
+    .introDiv{
+        // margin:auto 200px;
+    }
+
+    // mouse scrolling image 
+    .scrollIcon{
+        position: relative;
+        width:100px;
+        height:100px;
+        display:flex;
+        // margin: auto 200px;
+        flex-direction:column;
+
+        .mouseImage{
+            position: absolute;
+            width:40px;
+            height:60px;
+            left:15px;
+            top:-40px;
+            border:2px $black solid;
+            border-radius:40px;
+            animation:scrollDown 1s infinite;
+            z-index:10;
+            &::after{
+                content:'';
+                position: absolute;
+                height:20px;
+                width:2px;
+                background-color:$purple;
+                left:17.5px;
+                border-radius:10px;
+                top:8px;
+            }
+        }
         
+        .circleBackground{
+            position: absolute;
+            height:60px;
+            width:60px;
+            left:4px;
+            border-radius:50%;
+            background-color:rgba($color:$purple, $alpha:0.3);
+            animation:none;
+        }
     }
 }
 
@@ -48,20 +97,37 @@ nav{
             text-decoration:none;
             font-family:$serifFont;
             transition:0.3s all;
+            position: relative;
+
+            &::before{
+                // display:block;
+                position: absolute;
+                content:'';
+                left:-50px;
+                bottom:0;
+                width:0px;
+                height:1px;
+                background-color:$purple;
+                transition:width 0.3s;
+            }
 
             &:hover, &:focus{
                 color:$purple;
                 margin-left:30px;
 
-                &:before{
-                    width:20px;
+                &::before{
+                    width:40px;
                 }
             }
+
+
         }
     }
 
 
 }
+
+
 .skipLink{
     display:none;
 }
@@ -97,3 +163,6 @@ nav{
         }
     }
 }
+
+
+

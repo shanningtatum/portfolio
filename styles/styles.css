@@ -231,6 +231,27 @@ html {
   width: 80%;
 }
 
+@-webkit-keyframes scrollDown {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+}
+
+@keyframes scrollDown {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+}
 @font-face {
   font-family: "Playfair Display";
   src: url("../../../fonts/PlayfairDisplay-Regular.ttf");
@@ -249,14 +270,15 @@ html {
 h1 {
   font-family: "Inter", sans-serif;
   color: #A23B72;
-  font-size: 1.6rem;
+  letter-spacing: 1px;
+  font-size: clamp(1rem, 2vw, 1.6rem);
 }
 
 .boldName {
   display: block;
   font-family: "Playfair Display", serif;
   color: #202020;
-  font-size: 2.3rem;
+  font-size: clamp(1.5rem, 4vw, 4rem);
 }
 
 .greyText {
@@ -287,10 +309,65 @@ header .wrapper {
   display: flex;
 }
 header .headerRight {
+  background-color: #FAFAFA;
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   right: 0;
   height: 100vh;
   width: 85%;
+}
+header .scrollIcon {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+header .scrollIcon .mouseImage {
+  position: absolute;
+  width: 40px;
+  height: 60px;
+  left: 15px;
+  top: -40px;
+  border: 2px #202020 solid;
+  border-radius: 40px;
+  -webkit-animation: scrollDown 1s infinite;
+          animation: scrollDown 1s infinite;
+  z-index: 10;
+}
+header .scrollIcon .mouseImage::after {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 2px;
+  background-color: #A23B72;
+  left: 17.5px;
+  border-radius: 10px;
+  top: 8px;
+}
+header .scrollIcon .circleBackground {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  left: 4px;
+  border-radius: 50%;
+  background-color: rgba(162, 59, 114, 0.3);
+  -webkit-animation: none;
+          animation: none;
 }
 
 nav {
@@ -324,13 +401,25 @@ nav .wrapper a {
   font-family: "Playfair Display", serif;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
+  position: relative;
+}
+nav .wrapper a::before {
+  position: absolute;
+  content: "";
+  left: -50px;
+  bottom: 0;
+  width: 0px;
+  height: 1px;
+  background-color: #A23B72;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
 }
 nav .wrapper a:hover, nav .wrapper a:focus {
   color: #A23B72;
   margin-left: 30px;
 }
-nav .wrapper a:hover:before, nav .wrapper a:focus:before {
-  width: 20px;
+nav .wrapper a:hover::before, nav .wrapper a:focus::before {
+  width: 40px;
 }
 
 .skipLink {
