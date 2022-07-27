@@ -9,20 +9,19 @@ header{
         display:flex;
     }
 
-    .headerRight{
+    .headerRight {
         background-color:$offWhite;
         position: absolute;
         display:flex;
-        justify-content:flex-end;
         flex-direction:column;
-        // align-items:left;
+        align-items:left;
         right:0;
         height:100vh;
         width:85%;
     }
 
     .introDiv{
-        // margin:auto 200px;
+        margin:auto 10%;
     }
 
     // mouse scrolling image 
@@ -31,7 +30,7 @@ header{
         width:100px;
         height:100px;
         display:flex;
-        // margin: auto 200px;
+        margin:0 10%;
         flex-direction:column;
 
         .mouseImage{
@@ -42,17 +41,19 @@ header{
             top:-40px;
             border:2px $black solid;
             border-radius:40px;
-            animation:scrollDown 1s infinite;
             z-index:10;
+
             &::after{
                 content:'';
                 position: absolute;
-                height:20px;
+                height:15px;
                 width:2px;
                 background-color:$purple;
                 left:17.5px;
                 border-radius:10px;
                 top:8px;
+                animation:scrollDown 2s infinite;
+
             }
         }
         
@@ -79,19 +80,22 @@ nav{
     
     .wrapper{
         display:flex;
+        align-items:center;
+        justify-content: space-around;
         flex-direction:column;
         width:80%;
+        height:100vh;
 
         ul{
-            margin-top:60%;
+            display:flex;
+            flex-direction:column;
+            justify-content:space-evenly;
+            height:50%;
+            width:80%;
             padding:0;
             list-style:none;
         }
-    
-        li{
-            margin:50px 10px;
-        }
-        
+
         a{
             color:$black;
             text-decoration:none;
@@ -158,8 +162,8 @@ nav{
         transition: background-color 0.3s, color 0.3s;
 
         &:hover, &:focus{
-            background-color:rgba($color:$purple, $alpha:0.3);
-            color:$black;
+            background-color:rgba($color:$purple, $alpha:0.4);
+            color:$white;
         }
     }
 }
