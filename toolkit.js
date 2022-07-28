@@ -36,6 +36,10 @@ const toolKit = [
     img: "./assets/firebase.png",
     tool: "Firebase",
   },
+  {
+    img: "./assets/photoshop.png",
+    tool: "Photoshop",
+  },
 ];
 
 // Query the toolKitContainer element

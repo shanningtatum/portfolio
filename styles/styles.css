@@ -583,11 +583,7 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
   text-align: center;
   background-color: #FAFAFA;
 }
-.toolKit .toolKitContainer {
-  border: 2px red solid;
-}
 .toolKit .toolKitContainer ul {
-  border: 2px red solid;
   padding: 0;
   display: grid;
   -webkit-box-pack: center;
@@ -604,7 +600,6 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 2px red solid;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;

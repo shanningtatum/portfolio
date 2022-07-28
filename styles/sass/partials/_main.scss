@@ -35,9 +35,7 @@
     background-color:$offWhite;
 
     .toolKitContainer{
-        border:2px red solid;
         ul{
-            border:2px red solid;
             padding:0;
             display:grid;
             justify-content:center;
@@ -50,7 +48,6 @@
     
         li{
             display:flex;
-            border:2px red solid;
             flex-direction:column;
             align-content:center;
             justify-content:flex-end;
