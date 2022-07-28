@@ -260,6 +260,30 @@ html {
             transform: translateY(0px);
   }
 }
+@-webkit-keyframes fadeUp {
+  from {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes fadeUp {
+  from {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
 @font-face {
   font-family: "Playfair Display";
   src: url("../../../fonts/PlayfairDisplay-Regular.ttf");
@@ -347,6 +371,8 @@ header .headerRight {
 }
 header .introDiv {
   margin: auto 10%;
+  -webkit-animation: fadeUp 2s forwards;
+          animation: fadeUp 2s forwards;
 }
 header .scrollIcon {
   position: relative;
@@ -557,39 +583,48 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
   text-align: center;
   background-color: #FAFAFA;
 }
-
-.toolKitContainer ul {
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  list-style: none;
+.toolKit .toolKitContainer {
+  border: 2px red solid;
 }
-.toolKitContainer li {
+.toolKit .toolKitContainer ul {
+  border: 2px red solid;
+  padding: 0;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 60%;
+  margin: 0 auto 100px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.toolKit .toolKitContainer li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border: 2px red solid;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   -ms-flex-line-pack: center;
       align-content: center;
-  vertical-align: center;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
   width: 100px;
-  margin: 20px;
+  margin: 20px auto;
 }
-.toolKitContainer p {
+.toolKit .toolKitContainer p {
   margin: 0;
 }
-.toolKitContainer img {
+.toolKit .toolKitContainer img {
   width: 100%;
+}
+
+.portfolio {
+  width: 85%;
+  margin-left: auto;
 }
