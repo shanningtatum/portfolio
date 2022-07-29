@@ -72,16 +72,19 @@ const portfolio = [
     project: "Pokemon Matching Game",
     live: "https://pokemonmemorygame.netlify.app/",
     github: "https://github.com/huddle3-2/shannon-taimoor-project2",
+    img: "./assets/project2mobile.png",
   },
   {
     project: "Pokemon Quiz",
     live: "https://shanningtatum.github.io/pokemon-quiz/",
     github: "https://github.com/shanningtatum/pokemon-quiz",
+    img: "./assets/pokeQuiz-mobileDesktop.png",
   },
   {
     project: "Multi-Page Website",
     live: "https://shannontaoproject1.netlify.app/",
     github: "https://github.com/shanningtatum/shannonTao-project1",
+    img: "./assets/project1desktop.png",
   },
   {
     project: "Point of Sale System",
@@ -92,6 +95,7 @@ const portfolio = [
     project: "Perplexity Escape Games Website Mock-Up",
     live: "https://shanningtatum.github.io/perplexity/",
     github: "https://github.com/shanningtatum/perplexity",
+    img: "./assets/perplexityMobile.png",
   },
 ];
 

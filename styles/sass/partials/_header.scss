@@ -54,7 +54,6 @@ header{
                 border-radius:10px;
                 top:8px;
                 animation:scrollDown 2s infinite;
-
             }
         }
         
@@ -84,7 +83,7 @@ nav{
         align-items:center;
         justify-content: space-around;
         flex-direction:column;
-        width:80%;
+        width:100%;
         height:100vh;
 
         ul{
@@ -96,31 +95,39 @@ nav{
             padding:0;
             list-style:none;
 
+            li{
+                position: relative;
+                width:100%;
+                transition:0.3s all;
+            }
+
             a{
                 color:$black;
                 text-decoration:none;
                 font-family:$serifFont;
                 transition:0.3s all;
-                position: relative;
-    
+
                 &::before{
                     position: absolute;
                     content:'';
-                    left:-50px;
-                    bottom:0;
+                    left:-10px;
+                    bottom:0px;
                     width:0px;
                     height:1px;
                     background-color:$purple;
-                    transition:width 0.3s;
+                    transition:0.3s color, 0.4s width;
                 }
-    
+
                 &:hover, &:focus{
                     color:$purple;
-                    margin-left:30px;
+                    padding-left:40px;
     
                     &::before{
+                        // margin-left:50px;
+                        // animation: slideIn 0.5s forwards;
                         width:40px;
                     }
+                        
                 }
     
             }
