@@ -70,6 +70,89 @@
 .portfolio{
     width:85%;
     margin-left:auto;
+
+}
+.displayPortfolio{
+
+    ul{
+        display:grid;
+        grid-template-columns:repeat(3, 1fr);
+        grid-template-rows:repeat(2, 1fr);
+        gap:10px;
+        list-style:none;
+        padding:0;
+    }
+}
+
+
+.portfolioLi{
+
+    position: relative;
+    width:100%;
+
+    .portfolioContainer{
+        border:2px red solid;
+        display:flex;
+    height:100%;
+
+        flex-direction:column;
+    }
+
+    &:hover{
+        img{
+            transform:scale(1.5);
+        }
+    }
+
+    &:nth-child(1){
+        background-color:lightcoral;
+    }
+    &:nth-child(2){
+        background-color:lightblue;
+    }
+    &:nth-child(3){
+        background-color:mediumaquamarine;
+    }
+    &:nth-child(4){
+        background-color:lightsalmon;
+    }
+    &:nth-child(5){
+        background-color:palegoldenrod;
+    }
+    &:nth-child(6){
+        background-color:plum;
+    }
+
+    .projectImage{
+        display: flex;
+        margin:0 auto;
+        flex-basis:80%;
+        border-radius:10px;
+        overflow:hidden;
+    }
+
+
+
+    .projectText{
+        padding:20px 10px;
+        text-align: center;
+        flex-basis:20%;
+        background-color:$white;
+        
+    }
+
+    img{
+        width:100%;
+        transition:transform 0.7s;
+    }
+
+    a{
+        position: absolute;
+        top:0;
+        height:100%;
+        width:100%;
+        text-align:bottom;
+    }
 }
 
 
