@@ -6,6 +6,13 @@ const portfolio = [
     github: "https://github.com/shanningtatum/scoreboard",
     img: "./assets/peg-leaderboard.png",
     desc: "I created a way for users to enter the stats of recent escape room games. It calculates the passrate in real time and displays the most recent stat.",
+    tool: {
+      tool1: "HTML",
+      tool2: "SASS",
+      tool3: "JavaScript",
+      tool4: "jQuery",
+      tool5: "Firebase",
+    },
   },
   {
     project: "Pokemon Matching Game",
@@ -13,6 +20,12 @@ const portfolio = [
     github: "https://github.com/huddle3-2/shannon-taimoor-project2",
     img: "./assets/project2mobile.png",
     desc: "This was a pair programming project completed at Juno College's Web Development Bootcamp using the PokeAPI. Users can select the difficulty level and try to match 'em all!",
+    tool: {
+      tool1: "HTML",
+      tool2: "SASS",
+      tool3: "JavaScript",
+      tool4: "API",
+    },
   },
   {
     project: "Pokemon Quiz",
@@ -20,6 +33,13 @@ const portfolio = [
     github: "https://github.com/shanningtatum/pokemon-quiz",
     img: "./assets/pokeQuiz-mobileDesktop.png",
     desc: "A project completed in my Intro to Javascript course with Juno College that uses PokeAPI to render the data.",
+    tool: {
+      tool1: "HTML",
+      tool2: "CSS",
+      tool3: "JavaScript",
+      tool4: "jQuery",
+      tool5: "API",
+    },
   },
   {
     project: "Multi-Page Website",
@@ -27,6 +47,11 @@ const portfolio = [
     github: "https://github.com/shanningtatum/shannonTao-project1",
     img: "./assets/project1desktop.png",
     desc: "A multi-page website created using a client design. My first project at Juno College's Web Development Bootcamp.",
+    tool: {
+      tool1: "HTML",
+      tool2: "SASS",
+      tool3: "JavaScript",
+    },
   },
   {
     project: "Point of Sale System",
@@ -34,6 +59,12 @@ const portfolio = [
     github: "https://github.com/shanningtatum/pointOfSale",
     img: "./assets/pos-tablet.png",
     desc: "A simple point of sale system for a restaurant.",
+    tool: {
+      tool1: "HTML",
+      tool2: "SASS",
+      tool3: "JavaScript",
+      tool4: "jQuery",
+    },
   },
   {
     project: "Perplexity Escape Games Website Mock-Up",
@@ -41,6 +72,12 @@ const portfolio = [
     github: "https://github.com/shanningtatum/perplexity",
     img: "./assets/perplexityMobile.png",
     desc: "A website mock-up created for Perplexity Escape Games.",
+    tool: {
+      tool1: "HTML",
+      tool2: "CSS",
+      tool3: "JavaScript",
+      tool4: "jQuery",
+    },
   },
 ];
 

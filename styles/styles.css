@@ -704,77 +704,104 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
 }
 
 .displayPortfolio ul {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   list-style: none;
   padding: 0;
 }
 
 .portfolioLi {
-  border-radius: 10px;
-  position: relative;
   width: 100%;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  border-radius: 10px;
+  margin-bottom: 30px;
 }
-.portfolioLi:hover img {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-.portfolioLi .projectImage {
-  position: relative;
+.portfolioLi .portfolioContainer {
+  height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 auto;
-  -ms-flex-preferred-size: 80%;
-      flex-basis: 80%;
-  overflow: hidden;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   border-radius: 10px;
+  position: relative;
+}
+.portfolioLi .portfolioTool {
+  position: absolute;
+  left: -10px;
+  top: 20px;
+}
+.portfolioLi .portfolioTool p {
+  margin: 0;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  background-color: #818AA3;
+  color: #FFF;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.portfolioLi .projectImage {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  overflow: hidden;
+}
+.portfolioLi .projectImage:hover img, .portfolioLi .projectImage:focus img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 .portfolioLi .projectText {
-  text-align: center;
-  border-radius: -10px;
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
-  background-color: #FFF;
+  border: 2px orange solid;
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+}
+.portfolioLi .projectText h3 {
+  border: 2px yellow solid;
+  padding: 20px;
+}
+.portfolioLi .projectText p {
+  border: 2px green solid;
+  padding: 20px;
+}
+.portfolioLi .projectLinks {
+  border: 2px red solid;
+  width: 50%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.portfolioLi .projectLinks a {
+  font-family: "Inter", sans-serif;
+  background-color: #A23B72;
+  text-decoration: none;
+  color: #FFF;
+  padding: 5px 10px;
+  border-radius: 5px;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.portfolioLi .projectLinks a:hover, .portfolioLi .projectLinks a:focus {
+  background-color: maroon;
 }
 .portfolioLi img {
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
   width: 100%;
-  -webkit-transition: -webkit-transform 0.7s;
-  transition: -webkit-transform 0.7s;
-  transition: transform 0.7s;
-  transition: transform 0.7s, -webkit-transform 0.7s;
-}
-.portfolioLi a {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  text-align: bottom;
-}
-
-.projectDescription {
-  display: none;
-  font-family: "Inter", sans-serif;
-  position: absolute;
-  border: 2px red solid;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  background-color: rgba(32, 32, 32, 0.8);
-}
-.projectDescription p, .projectDescription a {
-  text-align: center;
-  position: static;
-  z-index: 10;
-  color: #FFF;
-}
-.projectDescription a {
-  text-decoration: none;
-  padding: 2px 10px;
-  border-radius: 20px;
-  background-color: #A23B72;
 }
 
 .portfolioLi:nth-child(1) .projectImage {

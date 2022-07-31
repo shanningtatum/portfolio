@@ -1,3 +1,4 @@
+const app = {};
 // Query the toolKitContainer element
 const toolKitContainer = document.querySelector(".toolKitContainer ul");
 
@@ -22,60 +23,81 @@ toolKit.forEach((item) => {
 
 // Query the displayPortfolio element
 const displayPortfolio = document.querySelector(".displayPortfolio ul");
+app.renderPortfolio = () => {
+  portfolio.forEach((item) => {
+    // 1
+    const liElement = document.createElement("li");
+    liElement.className = "portfolioLi";
+    // 2
+    const containerDiv = document.createElement("div");
+    containerDiv.className = "portfolioContainer";
 
-portfolio.forEach((item) => {
-  // 1
-  const liElement = document.createElement("li");
-  liElement.className = "portfolioLi";
-  // 2
-  const containerDiv = document.createElement("div");
-  containerDiv.className = "portfolioContainer";
-  // 3
-  const projectImageDiv = document.createElement("div");
-  projectImageDiv.className = "projectImage";
+    const portfolioTool = document.createElement("div");
+    portfolioTool.className = "portfolioTool";
+    // 2.1
+    const projectImageDiv = document.createElement("div");
+    projectImageDiv.className = "projectImage";
+    // 2.1.2
+    const projectImage = document.createElement("img");
+    projectImage.src = item.img;
+    // 2.2
+    const projectTextDiv = document.createElement("div");
+    projectTextDiv.className = "projectText";
+    // 2.2.1
+    const projectLinks = document.createElement("div");
+    projectLinks.className = "projectLinks";
 
-  const projectImage = document.createElement("img");
-  projectImage.src = item.img;
+    const h3Element = document.createElement("h3");
+    // 2.1.1.desc
+    const projectDescriptionText = document.createElement("p");
+    projectDescriptionText.textContent = item.desc;
+    // 2.1.1.a
+    const liveLink = document.createElement("a");
+    // 2.1.1.b
+    const githubLink = document.createElement("a");
 
-  const projectDescription = document.createElement("div");
-  projectDescription.classList.add("projectDescription");
+    // Grab all the tool names
+    const projectTools = item.tool;
 
-  const projectTextDiv = document.createElement("div");
-  projectTextDiv.className = "projectText";
+    for (const tool in projectTools) {
+      const toolElement = document.createElement("p");
+      const toolName = projectTools[tool];
+      toolElement.textContent = toolName;
 
-  const h3Element = document.createElement("h3");
-  const liveLink = document.createElement("a");
-  const githubLink = document.createElement("a");
+      portfolioTool.append(toolElement);
+    }
 
-  liveLink.href = item.live;
-  githubLink.href = item.github;
+    liveLink.href = item.live;
+    githubLink.href = item.github;
 
-  liveLink.textContent = `LIVE`;
-  githubLink.textContent = "GITHUB";
+    liveLink.textContent = "LIVE";
+    liveLink.target = "_blank";
+    githubLink.textContent = "GITHUB";
+    githubLink.target = "_blank";
 
-  h3Element.textContent = item.project;
+    h3Element.textContent = item.project;
 
-  projectImageDiv.append(projectDescription);
-  projectDescription.append(liveLink);
-  projectDescription.append(githubLink);
+    projectImageDiv.append(projectImage);
 
-  projectImageDiv.append(projectImage);
+    projectTextDiv.append(h3Element);
+    projectTextDiv.append(projectDescriptionText);
+    projectTextDiv.append(projectLinks);
 
-  projectTextDiv.append(h3Element);
+    projectLinks.append(liveLink);
+    projectLinks.append(githubLink);
 
-  containerDiv.append(projectImageDiv);
-  containerDiv.append(projectTextDiv);
-  // containerDiv.append(liveLink);
+    containerDiv.append(portfolioTool);
+    containerDiv.append(projectImageDiv);
+    containerDiv.append(projectTextDiv);
 
-  liElement.append(containerDiv);
-  displayPortfolio.append(liElement);
-
-  liElement.addEventListener("click", function (e) {
-    const overlay = e.target.previousElementSibling;
-
-    overlay.style.display = "block";
+    liElement.append(containerDiv);
+    displayPortfolio.append(liElement);
   });
-});
+};
+
+app.closeDescription = (e) => {
+  console.log(e.target.parentElement);
+};
 
 document.addEventListener("scroll", function () {
   if ((scrollY > 967 && scrollY < 2087) || scrollY == 967) {
@@ -105,6 +127,12 @@ document.addEventListener("scroll", function () {
     document.querySelector(".contactLink").classList.remove("active");
   }
 });
+
+app.init = () => {
+  app.renderPortfolio();
+};
+
+app.init();
 
 // 0 HOME
 
