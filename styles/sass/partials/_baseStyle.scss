@@ -8,3 +8,8 @@ html{
     width:80%;
 }
 
+::placeholder{
+    font-family:$sansSerifFont;
+    font-size:0.8rem;
+    color:$grey;
+}

@@ -231,6 +231,36 @@ html {
   width: 80%;
 }
 
+::-webkit-input-placeholder {
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  color: #818AA3;
+}
+
+::-moz-placeholder {
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  color: #818AA3;
+}
+
+:-ms-input-placeholder {
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  color: #818AA3;
+}
+
+::-ms-input-placeholder {
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  color: #818AA3;
+}
+
+::placeholder {
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  color: #818AA3;
+}
+
 @-webkit-keyframes scrollDown {
   0% {
     -webkit-transform: translateY(0);
@@ -787,9 +817,22 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
   display: flex;
 }
 .contact .contactForm form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   border: 2px red solid;
   -ms-flex-preferred-size: 60%;
       flex-basis: 60%;
+}
+.contact .contactForm label {
+  font-family: "Inter", sans-serif;
+  color: #FFF;
+  font-size: 0.8rem;
+  margin-bottom: 20px;
 }
 .contact .contactForm fieldset {
   display: -webkit-box;
@@ -798,6 +841,7 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
   padding: 0;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  border: none;
 }
 .contact .contactForm ul {
   display: -webkit-box;
@@ -805,6 +849,9 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   list-style: none;
   width: 100%;
   padding: 0;
@@ -819,42 +866,42 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 10px;
 }
 .contact .contactForm ul label {
-  font-family: "Inter", sans-serif;
-  color: #FFF;
-  font-size: 0.8rem;
+  margin: 20px 0;
 }
 .contact .contactForm ul input {
   padding: 10px;
   background-color: #202020;
   border: 1px rgba(255, 255, 255, 0.2) solid;
   border-radius: 5px;
+  font-size: 0.9rem;
   color: #FFF;
+  width: 90%;
 }
-.contact .contactForm ul input::-webkit-input-placeholder {
-  font-size: 0.8rem;
-  color: #818AA3;
+.contact .contactForm .submitButton {
+  font-family: "Inter", sans-serif;
+  background-color: #A23B72;
+  border: none;
+  margin: 30px 0;
+  padding: 20px;
+  border-radius: 5px;
+  width: 40%;
+  color: #FFF;
+  font-weight: bold;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
-.contact .contactForm ul input::-moz-placeholder {
-  font-size: 0.8rem;
-  color: #818AA3;
-}
-.contact .contactForm ul input:-ms-input-placeholder {
-  font-size: 0.8rem;
-  color: #818AA3;
-}
-.contact .contactForm ul input::-ms-input-placeholder {
-  font-size: 0.8rem;
-  color: #818AA3;
-}
-.contact .contactForm ul input::placeholder {
-  font-size: 0.8rem;
-  color: #818AA3;
+.contact .contactForm .submitButton:hover, .contact .contactForm .submitButton:focus {
+  background-color: maroon;
 }
 .contact .contactForm .messageInput {
   resize: none;
+  padding: 10px;
+  background-color: #202020;
+  border: 1px rgba(255, 255, 255, 0.2) solid;
+  border-radius: 5px;
+  color: #FFF;
 }
 .contact .contactForm .contactInfo {
   -ms-flex-preferred-size: 40%;
