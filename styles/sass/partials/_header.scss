@@ -118,7 +118,7 @@ nav{
                     transition:0.3s color, 0.4s width;
                 }
 
-                &:hover, &:focus{
+                &:hover, &:focus, .active{
                     color:$purple;
                     padding-left:40px;
     
@@ -129,8 +129,18 @@ nav{
                     }
                         
                 }
-    
+
             }
+
+            .active{
+                color:$purple;
+                padding-left:40px;
+
+                &::before{
+                    width:40px;
+                }
+            }
+
         }
 
         // NAV 'FOOTER'

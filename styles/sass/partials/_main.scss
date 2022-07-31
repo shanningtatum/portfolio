@@ -68,6 +68,7 @@
 // PORTFOLIO SECTION
 
 .portfolio{
+    padding-top:40px;
     width:85%;
     margin-left:auto;
 
@@ -78,7 +79,7 @@
         display:grid;
         grid-template-columns:repeat(3, 1fr);
         grid-template-rows:repeat(2, 1fr);
-        gap:10px;
+        gap:50px;
         list-style:none;
         padding:0;
     }
@@ -86,56 +87,27 @@
 
 
 .portfolioLi{
-
+    border-radius:10px;
     position: relative;
     width:100%;
 
-    .portfolioContainer{
-        border:2px red solid;
-        display:flex;
-    height:100%;
-
-        flex-direction:column;
-    }
-
     &:hover{
         img{
-            transform:scale(1.5);
+            transform:scale(1.2);
         }
-    }
-
-    &:nth-child(1){
-        background-color:lightcoral;
-    }
-    &:nth-child(2){
-        background-color:lightblue;
-    }
-    &:nth-child(3){
-        background-color:mediumaquamarine;
-    }
-    &:nth-child(4){
-        background-color:lightsalmon;
-    }
-    &:nth-child(5){
-        background-color:palegoldenrod;
-    }
-    &:nth-child(6){
-        background-color:plum;
     }
 
     .projectImage{
         display: flex;
         margin:0 auto;
         flex-basis:80%;
-        border-radius:10px;
         overflow:hidden;
+        border-radius:10px;
     }
 
-
-
     .projectText{
-        padding:20px 10px;
         text-align: center;
+        border-radius:-10px;
         flex-basis:20%;
         background-color:$white;
         
@@ -146,6 +118,7 @@
         transition:transform 0.7s;
     }
 
+    // set the a element to full width of the portfolio Li so the WHOLE thing is clickable
     a{
         position: absolute;
         top:0;
@@ -155,5 +128,124 @@
     }
 }
 
+// PORTFOLIO IMAGE COLOURS 
+.portfolioLi:nth-child(1) .projectImage {
+    background-color:lightcoral;
+}
+.portfolioLi:nth-child(2) .projectImage {
+    background-color:lightblue;
+}
+.portfolioLi:nth-child(3) .projectImage {
+    background-color:mediumaquamarine;
+}
+.portfolioLi:nth-child(4) .projectImage {
+    background-color:plum;
+}
+.portfolioLi:nth-child(5) .projectImage {
+    background-color:palegoldenrod;
+}
+.portfolioLi:nth-child(6) .projectImage {
+    background-color:lightsalmon;
+}
+
+// CONTACT PAGE
+
+.contact{
+    width:85%;
+    margin-left:auto;
+    padding:30px 0;
+    background-color:$black;
+
+    .contactHeader{
+        display:flex;
+        justify-content: space-between;
+
+    }
+    
+    .contactSocial {
+        display:flex;
+        flex-basis:30%;
+
+        ul{
+            display:flex;
+            list-style:none;
+            width:100%;
+            padding:0;
+            justify-content:space-evenly;
+            align-items: center;
+        }
+
+        a{
+            text-decoration:none;
+            color:$white;
+            font-size:1.5rem;
+            transition: color 0.3s;
+
+            &:hover, &:focus{
+                color:$purple;
+            }
+        }
+    }
+
+    .contactForm{
+
+        display:flex;
+
+        form{
+            border:2px red solid;
+            flex-basis:60%;
+        }
+
+        fieldset{
+            display:flex;
+            // flex-direction:column;
+            padding:0;
+            flex-wrap:wrap;
+        }
+
+        ul{
+            display:flex;
+            flex-wrap:wrap;
+            list-style:none;
+            width:100%;
+            padding:0;
+            li{
+                flex-basis:50%;
+                display:flex;
+                flex-direction:column;
+                padding:10px;
+            }
+
+            label{
+                font-family:$sansSerifFont;
+                color:$white;
+                font-size:0.8rem;
+            }
+
+            input{
+                padding:10px;
+                background-color:$black;
+                border:1px rgba($color:$white, $alpha:0.2) solid;
+                border-radius:5px;
+                color:$white;
+
+                &::placeholder{
+                    font-size:0.8rem;
+                    color:$grey;
+                }
+            }
+
+        }
 
 
+        .messageInput{
+            resize:none;
+        }
+
+        .contactInfo{
+            flex-basis:40%;
+            border:2px green solid;
+        }
+    }
+
+}

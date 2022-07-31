@@ -24,16 +24,16 @@
             <div class="logoDiv">Shannon Tao</div>
             <ul>
               <li>
-                <a href="#">Home</a>
+                <a href="#" class="homeLink active">Home</a>
               </li>
               <li>
-                <a href="#about">About</a>
+                <a href="#about" class="aboutLink">About</a>
               </li>
               <li>
-                <a href="#portfolio">Portfolio</a>
+                <a href="#portfolio" class="portfolioLink">Portfolio</a>
               </li>
               <li>
-                <a href="#contact">Contact</a>
+                <a href="#contact" class="contactLink">Contact</a>
               </li>
             </ul>
             <div class="navFooter">
@@ -162,36 +162,91 @@
         <div class="wrapper">
           <div class="contactHeader">
             <h2>Let's Connect!</h2>
+            <div class="contactSocial">
+              <ul>
+                <li>
+                  <a href="https://github.com/shanningtatum">
+                    <i class="fa-brands fa-github">
+                      <span class="sr-only">Link to GitHub</span>
+                    </i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/shannon-tao-b95159240/">
+                    <i class="fa-brands fa-linkedin">
+                      <span class="sr-only">Link to LinkedIn</span>
+                    </i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/drawingsbyshanner/?hl=en">
+                    <i class="fa-brands fa-instagram">
+                      <span class="sr-only">Link to Instagram</span>
+                    </i>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
+
           <div class="contactForm">
             <form action="">
               <fieldset>
-                <label for="userName">Full Name</label>
-                <input
-                  type="text"
-                  name="userName"
-                  placeholder="Your Name"
-                  required
-                />
-                <label for="subject">Subject (Optional)</label>
-                <input type="text" name="subject" placeholder="Your Subject" />
-                <label for="subject">Your Email</label>
-                <input
-                  type="email"
-                  name="subject"
-                  placeholder="Your E-mail"
-                  required
-                />
-                <label for="subject">Phone Number</label>
-                <input
-                  type="tel"
-                  name="subject"
-                  placeholder="+0 (000) 000 0000"
-                  required
-                />
+                <ul>
+                  <li>
+                    <label for="userName">Full Name: </label>
+                    <input
+                      type="text"
+                      name="userName"
+                      class="userNameInput"
+                      placeholder="Your Name"
+                      required
+                    />
+                  </li>
+                  <li>
+                    <label for="subject">Subject (Optional): </label>
+                    <input
+                      type="text"
+                      name="subject"
+                      class="subjectInput"
+                      placeholder="Your Subject"
+                    />
+                  </li>
+                  <li>
+                    <label for="subject">Your Email: </label>
+                    <input
+                      type="email"
+                      name="email"
+                      class="emailInput"
+                      placeholder="Your E-mail"
+                      required
+                    />
+                  </li>
+                  <li>
+                    <label for="telephone">Phone Number: </label>
+                    <input
+                      type="tel"
+                      name="telephone"
+                      class="telephoneInput"
+                      placeholder="+0 (000) 000 0000"
+                      required
+                    />
+                  </li>
+                </ul>
               </fieldset>
+              <label for="message">Message: </label>
+              <textarea
+                name="message"
+                class="messageInput"
+                rows="5"
+                placeholder="Hey Shannon! Love your stuff. Let's set up a time to chat."
+                required
+              ></textarea>
               <button class="submitButton">Submit Now</button>
             </form>
+            <div class="contactInfo">
+              <!-- contact info -->
+            </div>
           </div>
         </div>
       </section>

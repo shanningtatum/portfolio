@@ -360,6 +360,10 @@ section h2 {
   font-weight: normal;
 }
 
+.contact h2 {
+  color: #FFF;
+}
+
 header {
   height: 100vh;
   display: -webkit-box;
@@ -504,11 +508,18 @@ nav .wrapper ul a::before {
   -webkit-transition: 0.3s color, 0.4s width;
   transition: 0.3s color, 0.4s width;
 }
-nav .wrapper ul a:hover, nav .wrapper ul a:focus {
+nav .wrapper ul a:hover, nav .wrapper ul a:focus, nav .wrapper ul a .active {
   color: #A23B72;
   padding-left: 40px;
 }
-nav .wrapper ul a:hover::before, nav .wrapper ul a:focus::before {
+nav .wrapper ul a:hover::before, nav .wrapper ul a:focus::before, nav .wrapper ul a .active::before {
+  width: 40px;
+}
+nav .wrapper ul .active {
+  color: #A23B72;
+  padding-left: 40px;
+}
+nav .wrapper ul .active::before {
   width: 40px;
 }
 nav .wrapper .navFooter a {
@@ -646,6 +657,7 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
 }
 
 .portfolio {
+  padding-top: 40px;
   width: 85%;
   margin-left: auto;
 }
@@ -654,47 +666,19 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 10px;
+  gap: 50px;
   list-style: none;
   padding: 0;
 }
 
 .portfolioLi {
+  border-radius: 10px;
   position: relative;
   width: 100%;
 }
-.portfolioLi .portfolioContainer {
-  border: 2px red solid;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
 .portfolioLi:hover img {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-}
-.portfolioLi:nth-child(1) {
-  background-color: lightcoral;
-}
-.portfolioLi:nth-child(2) {
-  background-color: lightblue;
-}
-.portfolioLi:nth-child(3) {
-  background-color: mediumaquamarine;
-}
-.portfolioLi:nth-child(4) {
-  background-color: lightsalmon;
-}
-.portfolioLi:nth-child(5) {
-  background-color: palegoldenrod;
-}
-.portfolioLi:nth-child(6) {
-  background-color: plum;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 .portfolioLi .projectImage {
   display: -webkit-box;
@@ -703,12 +687,12 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
   margin: 0 auto;
   -ms-flex-preferred-size: 80%;
       flex-basis: 80%;
-  border-radius: 10px;
   overflow: hidden;
+  border-radius: 10px;
 }
 .portfolioLi .projectText {
-  padding: 20px 10px;
   text-align: center;
+  border-radius: -10px;
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
   background-color: #FFF;
@@ -726,4 +710,154 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
   height: 100%;
   width: 100%;
   text-align: bottom;
+}
+
+.portfolioLi:nth-child(1) .projectImage {
+  background-color: lightcoral;
+}
+
+.portfolioLi:nth-child(2) .projectImage {
+  background-color: lightblue;
+}
+
+.portfolioLi:nth-child(3) .projectImage {
+  background-color: mediumaquamarine;
+}
+
+.portfolioLi:nth-child(4) .projectImage {
+  background-color: plum;
+}
+
+.portfolioLi:nth-child(5) .projectImage {
+  background-color: palegoldenrod;
+}
+
+.portfolioLi:nth-child(6) .projectImage {
+  background-color: lightsalmon;
+}
+
+.contact {
+  width: 85%;
+  margin-left: auto;
+  padding: 30px 0;
+  background-color: #202020;
+}
+.contact .contactHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.contact .contactSocial {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+.contact .contactSocial ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contact .contactSocial a {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 1.5rem;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.contact .contactSocial a:hover, .contact .contactSocial a:focus {
+  color: #A23B72;
+}
+.contact .contactForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contact .contactForm form {
+  border: 2px red solid;
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+}
+.contact .contactForm fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.contact .contactForm ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+.contact .contactForm ul li {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+}
+.contact .contactForm ul label {
+  font-family: "Inter", sans-serif;
+  color: #FFF;
+  font-size: 0.8rem;
+}
+.contact .contactForm ul input {
+  padding: 10px;
+  background-color: #202020;
+  border: 1px rgba(255, 255, 255, 0.2) solid;
+  border-radius: 5px;
+  color: #FFF;
+}
+.contact .contactForm ul input::-webkit-input-placeholder {
+  font-size: 0.8rem;
+  color: #818AA3;
+}
+.contact .contactForm ul input::-moz-placeholder {
+  font-size: 0.8rem;
+  color: #818AA3;
+}
+.contact .contactForm ul input:-ms-input-placeholder {
+  font-size: 0.8rem;
+  color: #818AA3;
+}
+.contact .contactForm ul input::-ms-input-placeholder {
+  font-size: 0.8rem;
+  color: #818AA3;
+}
+.contact .contactForm ul input::placeholder {
+  font-size: 0.8rem;
+  color: #818AA3;
+}
+.contact .contactForm .messageInput {
+  resize: none;
+}
+.contact .contactForm .contactInfo {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  border: 2px green solid;
 }
