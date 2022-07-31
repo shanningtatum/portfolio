@@ -54,6 +54,21 @@ nav a {
     font-size:1rem;
 }
 
+// NAV FOOTER
+
+.navFooter {
+    text-align: center;
+
+    p {
+        font-family:$serifFont;
+        font-size:0.8rem;
+    }
+
+    a{
+        font-size:0.8rem;
+    }
+}
+
 // SECTION HEADERS
 h2{
     font-size:clamp(1rem, 2vw, 1.4rem);
