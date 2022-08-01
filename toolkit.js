@@ -4,6 +4,7 @@ const toolKitContainer = document.querySelector(".toolKitContainer ul");
 const hamburgerMenu = document.querySelector(".hamburgerMenu");
 
 // query nav links
+const navBar = document.querySelector(".navBar");
 const aboutLink = document.querySelector(".aboutLink");
 const homeLink = document.querySelector(".homeLink");
 const portfolioLink = document.querySelector(".portfolioLink");
@@ -15,6 +16,9 @@ const username = document.querySelector(".userNameInput");
 const email = document.querySelector(".emailInput");
 const telephoneInput = document.querySelector(".telephoneInput");
 const subjectInput = document.querySelector(".subjectInput");
+
+// scroll to top query
+const scrollToTop = document.querySelector(".scrollToTop");
 
 hamburgerMenu.addEventListener("click", function () {
   document.querySelector("nav .wrapper ul").classList.toggle("active");
@@ -122,37 +126,7 @@ app.closeDescription = (e) => {
   console.log(e.target.parentElement);
 };
 
-document.addEventListener("scroll", function () {
-  if ((scrollY > 967 && scrollY < 2087) || scrollY == 967) {
-    // about section
-    aboutLink.classList.add("active");
-    homeLink.classList.remove("active");
-    portfolioLink.classList.remove("active");
-    contactLink.classList.remove("active");
-  } else if ((scrollY > 2088 && scrollY < 2655) || scrollY == 2089) {
-    // portfolio section
-    portfolioLink.classList.add("active");
-    homeLink.classList.remove("active");
-    aboutLink.classList.remove("active");
-    contactLink.classList.remove("active");
-  } else if (scrollY > 2655 && scrollY == 2656) {
-    // contact section
-
-    contactLink.classList.add("active");
-    homeLink.classList.remove("active");
-    aboutLink.classList.remove("active");
-    portfolioLink.classList.remove("active");
-  } else if (scrollY < 966 || scrollY == 0) {
-    // home section
-    homeLink.classList.add("active");
-    aboutLink.classList.remove("active");
-    portfolioLink.classList.remove("active");
-    contactLink.classList.remove("active");
-  }
-});
-
-app.init = () => {
-  app.renderPortfolio();
+app.setupEventListeners = () => {
   submitButton.addEventListener("submit", function (e) {
     e.preventDefault();
     submitButton.value = "";
@@ -161,6 +135,51 @@ app.init = () => {
     telephoneInput.value = "";
     subjectInput.value = "";
   });
+
+  scrollToTop.addEventListener("click", function () {
+    window.scrollTo(0, 0);
+  });
+
+  document.addEventListener("scroll", function () {
+    if (scrollY > 100) {
+      scrollToTop.classList.add("active");
+      navBar.classList.add("active");
+    } else {
+      scrollToTop.classList.remove("active");
+      navBar.classList.remove("active");
+    }
+    if ((scrollY > 967 && scrollY < 2087) || scrollY == 967) {
+      // about section
+      aboutLink.classList.add("active");
+      homeLink.classList.remove("active");
+      portfolioLink.classList.remove("active");
+      contactLink.classList.remove("active");
+    } else if ((scrollY > 2088 && scrollY < 2655) || scrollY == 2089) {
+      // portfolio section
+      portfolioLink.classList.add("active");
+      homeLink.classList.remove("active");
+      aboutLink.classList.remove("active");
+      contactLink.classList.remove("active");
+    } else if (scrollY > 2655 && scrollY == 2656) {
+      // contact section
+
+      contactLink.classList.add("active");
+      homeLink.classList.remove("active");
+      aboutLink.classList.remove("active");
+      portfolioLink.classList.remove("active");
+    } else if (scrollY < 966 || scrollY == 0) {
+      // home section
+      homeLink.classList.add("active");
+      aboutLink.classList.remove("active");
+      portfolioLink.classList.remove("active");
+      contactLink.classList.remove("active");
+    }
+  });
+};
+
+app.init = () => {
+  app.renderPortfolio();
+  app.setupEventListeners();
 };
 
 app.init();

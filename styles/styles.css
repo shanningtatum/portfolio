@@ -223,6 +223,7 @@ template {
 
 html {
   font-size: 125%;
+  scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -659,6 +660,34 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
   color: #FFF;
 }
 
+.scrollToTop {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  font-size: 2rem;
+  z-index: 100;
+  background-color: rgba(162, 59, 114, 0.4);
+  width: 60px;
+  height: 60px;
+  color: #FFF;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.scrollToTop i {
+  margin: auto;
+}
+.scrollToTop:hover, .scrollToTop:focus {
+  background-color: #A23B72;
+}
+.scrollToTop.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .about {
   width: 85%;
   margin-left: auto;
@@ -1034,6 +1063,11 @@ footer {
   .portfolioLi .projectLinks {
     width: 100%;
   }
+  .scrollToTop {
+    font-size: 1.4rem;
+    width: 40px;
+    height: 40px;
+  }
 }
 @media (max-width: 810px) {
   header .headerRight {
@@ -1048,6 +1082,10 @@ footer {
     height: 10vh;
     background-color: #FFF;
     z-index: 20;
+  }
+  nav.active {
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   }
   nav .wrapper {
     height: 10vh !important;
@@ -1236,6 +1274,10 @@ footer {
   }
   .contact .contactForm ul input {
     width: 100%;
+  }
+  .scrollToTop {
+    right: 20px;
+    bottom: 20px;
   }
 }
 @media (max-width: 500px) {

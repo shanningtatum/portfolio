@@ -162,7 +162,7 @@ nav{
     }
 }
 
-
+// SKIP LINK
 .skipLink{
     position: absolute;
     left:-1000px;
@@ -175,6 +175,7 @@ nav{
     }
 }
 
+// SOCIAL LINKS
 .socialLinks{
     position: absolute;
     right:0;
@@ -207,5 +208,32 @@ nav{
     }
 }
 
+// SCROLL TO TOP
+.scrollToTop{
+    display:none;
+    position: fixed;
+    bottom:40px;
+    right:40px;
+    font-size:2rem;
+    z-index:100;
+    background-color:rgba($color:$purple, $alpha:0.4);
+    width:60px;
+    height:60px;
+    color:$white;
+    border-radius:50%;
+    cursor:pointer;
+    transition:background-color 0.3s;
+
+    i{
+        margin:auto;
+    }
+    &:hover, &:focus{
+        background-color:$purple;
+    }
+
+    &.active{
+        display:flex;
+    }
+}
 
 
