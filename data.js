@@ -5,7 +5,7 @@ const portfolio = [
     live: "https://peg-leaderboard.netlify.app/",
     github: "https://github.com/shanningtatum/scoreboard",
     img: "./assets/peg-leaderboard.png",
-    desc: "I created a way for users to enter the stats of recent escape room games. It calculates the passrate in real time and displays the most recent stat.",
+    desc: "I created a way for employees to enter the stats of recent escape room games. It calculates the passrate in real time and displays the most recent stat using Google's Firebase to store the data.",
     tool: {
       tool1: "HTML",
       tool2: "SASS",
@@ -32,7 +32,7 @@ const portfolio = [
     live: "https://shanningtatum.github.io/pokemon-quiz/",
     github: "https://github.com/shanningtatum/pokemon-quiz",
     img: "./assets/pokeQuiz-mobileDesktop.png",
-    desc: "A project completed in my Intro to Javascript course with Juno College that uses PokeAPI to render the data.",
+    desc: "A project completed in my Intro to Javascript course with Juno College that uses PokeAPI to render the data. It tracks users progress and displays a message depending on how many correct answers they got.",
     tool: {
       tool1: "HTML",
       tool2: "CSS",
@@ -46,7 +46,7 @@ const portfolio = [
     live: "https://shannontaoproject1.netlify.app/",
     github: "https://github.com/shanningtatum/shannonTao-project1",
     img: "./assets/project1desktop.png",
-    desc: "A multi-page website created using a client design. My first project at Juno College's Web Development Bootcamp.",
+    desc: "A multi-page website created using a client design that uses responsive, and accessible design. ",
     tool: {
       tool1: "HTML",
       tool2: "SASS",
@@ -58,7 +58,7 @@ const portfolio = [
     live: "https://shanningtatum.github.io/burgershot/",
     github: "https://github.com/shanningtatum/pointOfSale",
     img: "./assets/pos-tablet.png",
-    desc: "A simple point of sale system for a restaurant.",
+    desc: "A simple point of sale system for a restaurant. Users can add items to a cart, increase or decrease the quantity, apply a discount to the purchase.",
     tool: {
       tool1: "HTML",
       tool2: "SASS",
