@@ -773,6 +773,7 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
       flex-basis: 70%;
 }
 .portfolioLi .projectText h3, .portfolioLi .projectText p {
+  text-align: justify;
   padding: 20px;
 }
 .portfolioLi .projectLinks {
