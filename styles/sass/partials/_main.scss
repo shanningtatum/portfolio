@@ -1,3 +1,5 @@
+
+
 // ABOUT SECTION
 .about{
     width:85%;
@@ -310,6 +312,21 @@
 
         .contactInfo{
             flex-basis:40%;
+            padding:0 20px;
+
+            h3{
+                font-family:$serifFont;
+                color:$white;
+                font-weight:normal;
+                margin:40px 0;
+
+            }
+
+            p{
+                font-size:0.8rem;
+                color:$white;
+
+            }
         }
     }
 
@@ -321,4 +338,10 @@
         margin-left:20px;
     }
 
+}
+
+// FOOTER
+
+footer {
+    display:none;
 }

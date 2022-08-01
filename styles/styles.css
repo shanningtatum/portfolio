@@ -575,7 +575,15 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
 }
 
 .skipLink {
-  display: none;
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  background-color: #FFF;
+  color: #202020;
+  z-index: 40;
+}
+.skipLink:focus {
+  left: 0;
 }
 
 .socialLinks {
@@ -959,6 +967,17 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
 .contact .contactForm .contactInfo {
   -ms-flex-preferred-size: 40%;
       flex-basis: 40%;
+  padding: 0 20px;
+}
+.contact .contactForm .contactInfo h3 {
+  font-family: "Playfair Display", serif;
+  color: #FFF;
+  font-weight: normal;
+  margin: 40px 0;
+}
+.contact .contactForm .contactInfo p {
+  font-size: 0.8rem;
+  color: #FFF;
 }
 .contact .contactForm ul li:nth-child(2) input, .contact .contactForm ul li:nth-child(2) label {
   margin-left: 20px;
@@ -967,6 +986,23 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
   margin-left: 20px;
 }
 
+footer {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .portfolioLi .projectImage {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .portfolioLi .projectText {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .portfolioLi .projectLinks {
+    width: 100%;
+  }
+}
 @media (max-width: 810px) {
   header .headerRight {
     width: 100%;
@@ -995,7 +1031,6 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
     top: 10vh;
     left: 0;
     background-color: #FFF;
-    border: 2px red solid;
     width: 50%;
     margin: 0;
     height: 90vh;
@@ -1003,14 +1038,22 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
     transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
     transition: transform 0.5s, -webkit-transform 0.5s;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   }
   nav .wrapper ul li {
     text-align: center;
+  }
+  nav .wrapper ul a {
+    padding: 0;
   }
   nav .wrapper ul a::before {
     display: none;
   }
   nav .wrapper ul a:hover, nav .wrapper ul a:focus {
+    padding: 0;
+  }
+  nav .wrapper ul a.active {
     padding: 0;
   }
   nav .wrapper ul.active {
@@ -1040,6 +1083,8 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
     background-color: #202020;
     height: 3px;
     border-radius: 10px;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
   }
   nav .hamburgerMenu .lineTwo::before {
     top: -10px;
@@ -1047,10 +1092,122 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
   nav .hamburgerMenu .lineThree::before {
     top: -20px;
   }
+  nav .hamburgerMenu.active .lineOne::before {
+    opacity: 0;
+  }
+  nav .hamburgerMenu.active .lineTwo::before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  nav .hamburgerMenu.active .lineThree::before {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    top: -10px;
+  }
   .socialLinks {
     top: 30%;
   }
   .navFooter {
     display: none;
+  }
+  .about, .portfolio, .contact {
+    width: 100%;
+  }
+  .toolKit .toolKitContainer ul {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 80%;
+  }
+  .toolKit .toolKitContainer li {
+    width: 80px;
+  }
+  .portfolioLi .portfolioContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .portfolioLi .projectImage {
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+  .contact .contactForm {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .contact .contactForm ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact .contactForm ul li {
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+  }
+  .contact .contactForm ul li:nth-child(2) input, .contact .contactForm ul li:nth-child(2) label, .contact .contactForm ul li:nth-child(4) input, .contact .contactForm ul li:nth-child(4) label {
+    margin-left: 0;
+  }
+  .contact .contactForm ul input {
+    width: 100%;
+  }
+  .contact .contactForm .messageInput {
+    width: 100%;
+  }
+  .contact .contactForm .contactInfo {
+    padding: 0;
+  }
+  .contact .contactForm .submitButton {
+    margin: 30px auto;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    background-color: #202020;
+    border-top: 1px rgba(129, 138, 163, 0.5) solid;
+    padding: 20px 0;
+  }
+  footer p {
+    font-family: "Playfair Display", serif;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 600px) {
+  .greyText {
+    display: block;
+  }
+  .about .aboutMe {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact .contactHeader {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact .contactSocial ul {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .contact .contactForm ul input {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  nav .wrapper ul {
+    width: 70%;
   }
 }

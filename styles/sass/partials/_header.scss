@@ -164,7 +164,15 @@ nav{
 
 
 .skipLink{
-    display:none;
+    position: absolute;
+    left:-1000px;
+    top:5px;
+    background-color:$white;
+    color:$black;
+    z-index:40;
+    &:focus{
+        left:0;
+    }
 }
 
 .socialLinks{

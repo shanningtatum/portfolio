@@ -3,8 +3,15 @@ const app = {};
 const toolKitContainer = document.querySelector(".toolKitContainer ul");
 const hamburgerMenu = document.querySelector(".hamburgerMenu");
 
+// query nav links
+const aboutLink = document.querySelector(".aboutLink");
+const homeLink = document.querySelector(".homeLink");
+const portfolioLink = document.querySelector(".portfolioLink");
+const contactLink = document.querySelector(".contactLink");
+
 hamburgerMenu.addEventListener("click", function () {
   document.querySelector("nav .wrapper ul").classList.toggle("active");
+  hamburgerMenu.classList.toggle("active");
 });
 
 toolKit.forEach((item) => {
@@ -108,29 +115,29 @@ app.closeDescription = (e) => {
 document.addEventListener("scroll", function () {
   if ((scrollY > 967 && scrollY < 2087) || scrollY == 967) {
     // about section
-    document.querySelector(".aboutLink").classList.add("active");
-    document.querySelector(".homeLink").classList.remove("active");
-    document.querySelector(".portfolioLink").classList.remove("active");
-    document.querySelector(".contactLink").classList.remove("active");
+    aboutLink.classList.add("active");
+    homeLink.classList.remove("active");
+    portfolioLink.classList.remove("active");
+    contactLink.classList.remove("active");
   } else if ((scrollY > 2088 && scrollY < 2655) || scrollY == 2089) {
     // portfolio section
-    document.querySelector(".portfolioLink").classList.add("active");
-    document.querySelector(".homeLink").classList.remove("active");
-    document.querySelector(".aboutLink").classList.remove("active");
-    document.querySelector(".contactLink").classList.remove("active");
+    portfolioLink.classList.add("active");
+    homeLink.classList.remove("active");
+    aboutLink.classList.remove("active");
+    contactLink.classList.remove("active");
   } else if (scrollY > 2655 && scrollY == 2656) {
     // contact section
 
-    document.querySelector(".contactLink").classList.add("active");
-    document.querySelector(".homeLink").classList.remove("active");
-    document.querySelector(".aboutLink").classList.remove("active");
-    document.querySelector(".portfolioLink").classList.remove("active");
+    contactLink.classList.add("active");
+    homeLink.classList.remove("active");
+    aboutLink.classList.remove("active");
+    portfolioLink.classList.remove("active");
   } else if (scrollY < 966 || scrollY == 0) {
     // home section
-    document.querySelector(".homeLink").classList.add("active");
-    document.querySelector(".aboutLink").classList.remove("active");
-    document.querySelector(".portfolioLink").classList.remove("active");
-    document.querySelector(".contactLink").classList.remove("active");
+    homeLink.classList.add("active");
+    aboutLink.classList.remove("active");
+    portfolioLink.classList.remove("active");
+    contactLink.classList.remove("active");
   }
 });
 

@@ -1,3 +1,21 @@
+@media(max-width:1000px){
+    // PORTFOLIO 1000px
+    .portfolioLi{
+
+        .projectImage{
+            flex-basis:50%;
+        }
+
+        .projectText{
+            flex-basis:50%;
+        }
+
+        .projectLinks{
+            width:100%;
+        }
+    }
+}
+// GENERAL TABLETS 
 @media (max-width:810px){
     header{
         .headerRight{
@@ -14,6 +32,8 @@
         height:10vh;
         background-color:$white;
         z-index:20;
+        // box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
         .wrapper{
             height:10vh !important;
             width:100%;
@@ -25,24 +45,27 @@
                 top:10vh;
                 left:0;
                 background-color:$white;
-                border:2px red solid;
                 width:50%;
                 margin:0;
                 height:90vh;
                 transition:transform 0.5s;
-
-
+                box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 
                 li{ 
                     text-align: center;
                 }
                 
                 a{
+                    padding:0;
                     &::before{
                         display:none;
                     }
 
                     &:hover, &:focus{
+                        padding:0;
+                    }
+
+                    &.active{
                         padding:0;
                     }
                 }
@@ -81,6 +104,7 @@
                     background-color:$black;
                     height:3px;
                     border-radius:10px;
+                    transition:0.3s all;
 
                 }
             }
@@ -91,11 +115,21 @@
                 top:-20px;
             }
 
+            &.active{
+                .lineOne::before{
+                    opacity:0;
+                }
+                .lineTwo::before{
+                    transform:rotate(45deg);
+                }
+                .lineThree::before{
+                    transform:rotate(-45deg);
+                    top:-10px;
+                }
 
+            }
         }
     }
-
-
 
     .socialLinks{
         top:30%;
@@ -103,5 +137,136 @@
 
     .navFooter{
         display:none;
+    }
+
+    // OTHER SECTIONS
+
+    .about, .portfolio, .contact{
+        width:100%;
+    }
+
+    // TOOL KIT
+
+    .toolKit{
+        .toolKitContainer{
+            ul{
+                grid-template-columns:repeat(3, 1fr);
+                grid-template-rows:repeat(3, 1fr);
+                width:80%;
+            }
+
+            li{
+                width:80px;
+            }
+        }
+    }
+    // PORTFOLIO 
+
+    .portfolioLi{
+        .portfolioContainer{
+            flex-direction:column;
+        }
+
+        .projectImage{
+            border-top-right-radius:10px;
+            border-bottom-left-radius:0;
+        }
+    }
+
+    //CONTACT FORM
+
+    .contact{
+        .contactForm{
+            flex-direction:column-reverse;
+
+
+            ul{
+                flex-direction:column;
+
+                li{
+                    flex-basis:0;
+                }
+
+                li:nth-child(2) input, li:nth-child(2) label, li:nth-child(4) input, li:nth-child(4) label{
+                    margin-left:0;
+                }
+
+                input{
+                    width:100%;
+                }
+
+            }
+
+            .messageInput{
+                width:100%;
+            }
+
+            .contactInfo{
+                padding:0;
+            }
+
+            .submitButton{
+                margin:30px auto;
+            }
+        }
+
+    }
+
+    // FOOTER
+
+    footer{
+        display:flex;
+        flex-direction: column;
+        align-content: center;
+        background-color:$black;
+        border-top:1px rgba($color:$grey, $alpha:0.5) solid;
+        padding:20px 0;
+        p{
+            font-family:$serifFont;
+            margin:0 auto;
+        }
+    }
+}
+
+@media (max-width:600px){
+    .greyText{
+        display:block;
+    }
+    .about{
+        .aboutMe{
+            flex-direction:column;
+        }
+    }
+    .contact{
+        .contactHeader{
+            flex-direction:column;
+        }
+
+        .contactSocial{
+
+            ul{
+                justify-content: space-between;
+
+            }
+        }
+
+        .contactForm{
+            ul{
+                input{
+                    width:100%;
+                }
+            }
+
+        }
+    }
+}
+
+@media (max-width:500px){
+    nav{
+        .wrapper{
+            ul{
+                width:70%;
+            }
+        }
     }
 }
