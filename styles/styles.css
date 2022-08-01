@@ -748,7 +748,6 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
   top: 20px;
 }
 .portfolioLi .portfolioTool p {
-  text-align: justify;
   margin: 0;
   padding: 0 10px;
   margin-bottom: 10px;
@@ -773,7 +772,6 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
       flex-basis: 70%;
 }
 .portfolioLi .projectText h3, .portfolioLi .projectText p {
-  text-align: justify;
   padding: 20px;
 }
 .portfolioLi .projectLinks {
