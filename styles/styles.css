@@ -392,6 +392,7 @@ p {
 }
 
 section h2 {
+  position: relative;
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: normal;
 }
@@ -403,6 +404,36 @@ section h2 {
 
 .contact h2 {
   color: #FFF;
+}
+
+.aboutMeRightDiv h2::before {
+  position: absolute;
+  content: "Who Are You?";
+  font-family: "Inter", sans-serif;
+  top: -20px;
+  font-size: 0.35em;
+  color: #A23B72;
+  text-transform: uppercase;
+}
+
+.portfolio .wrapper h2::before {
+  position: absolute;
+  content: "What have you made?";
+  font-family: "Inter", sans-serif;
+  top: -20px;
+  font-size: 0.35em;
+  color: #A23B72;
+  text-transform: uppercase;
+}
+
+.contactHeader h2::before {
+  position: absolute;
+  content: "how can i contact you?";
+  font-family: "Inter", sans-serif;
+  top: -20px;
+  font-size: 0.35em;
+  color: #A23B72;
+  text-transform: uppercase;
 }
 
 header {
@@ -649,6 +680,7 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
   display: flex;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
+  padding-bottom: 40px;
 }
 .about .aboutMeLeftDiv, .about .aboutMeRightDiv {
   -ms-flex-preferred-size: 50%;

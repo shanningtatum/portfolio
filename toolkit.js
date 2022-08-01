@@ -9,6 +9,13 @@ const homeLink = document.querySelector(".homeLink");
 const portfolioLink = document.querySelector(".portfolioLink");
 const contactLink = document.querySelector(".contactLink");
 
+// query submit button and input forms
+const submitButton = document.querySelector(".submitButton");
+const username = document.querySelector(".userNameInput");
+const email = document.querySelector(".emailInput");
+const telephoneInput = document.querySelector(".telephoneInput");
+const subjectInput = document.querySelector(".subjectInput");
+
 hamburgerMenu.addEventListener("click", function () {
   document.querySelector("nav .wrapper ul").classList.toggle("active");
   hamburgerMenu.classList.toggle("active");
@@ -20,13 +27,16 @@ toolKit.forEach((item) => {
   const pElement = document.createElement("p");
   const source = document.createAttribute("src");
   const alt = document.createAttribute("alt");
+  const draggable = document.createAttribute("draggable");
 
   pElement.textContent = item.tool;
   source.value = item.img;
   alt.value = `${item.tool} Icon`;
+  draggable.value = false;
 
   imgElement.setAttributeNode(source);
   imgElement.setAttributeNode(alt);
+  imgElement.setAttributeNode(draggable);
 
   liElement.append(imgElement, pElement);
 
@@ -143,6 +153,14 @@ document.addEventListener("scroll", function () {
 
 app.init = () => {
   app.renderPortfolio();
+  submitButton.addEventListener("submit", function (e) {
+    e.preventDefault();
+    submitButton.value = "";
+    username.value = "";
+    email.value = "";
+    telephoneInput.value = "";
+    subjectInput.value = "";
+  });
 };
 
 app.init();

@@ -5,7 +5,7 @@ const portfolio = [
     live: "https://peg-leaderboard.netlify.app/",
     github: "https://github.com/shanningtatum/scoreboard",
     img: "./assets/peg-leaderboard.png",
-    desc: "I created a way for employees to enter the stats of recent escape room games. It calculates the passrate in real time and displays the most recent stat using Google's Firebase to store the data.",
+    desc: "I created a way for employees to enter the stats of recent escape room games. It calculates the pass rates in real time and displays the most recent stats using Google's Firebase to store the data.",
     tool: {
       tool1: "HTML",
       tool2: "SASS",
@@ -19,7 +19,7 @@ const portfolio = [
     live: "https://pokemonmemorygame.netlify.app/",
     github: "https://github.com/huddle3-2/shannon-taimoor-project2",
     img: "./assets/project2mobile.png",
-    desc: "This was a pair programming project completed at Juno College's Web Development Bootcamp using the PokeAPI. Users can select the difficulty level and try to match 'em all!",
+    desc: "A game that requires users to match Pokemon based on the images. This was a pair programming project completed at Juno College's Web Development Bootcamp using the PokeAPI to fetch the images. Users can select the difficulty level and try to match 'em all!",
     tool: {
       tool1: "HTML",
       tool2: "SASS",
@@ -46,7 +46,7 @@ const portfolio = [
     live: "https://shannontaoproject1.netlify.app/",
     github: "https://github.com/shanningtatum/shannonTao-project1",
     img: "./assets/project1desktop.png",
-    desc: "A multi-page website created using a client design that uses responsive, and accessible design. ",
+    desc: "A multi-page website created based on a client design that is responsive and accessible to users who use a screen-reader. ",
     tool: {
       tool1: "HTML",
       tool2: "SASS",
@@ -55,10 +55,10 @@ const portfolio = [
   },
   {
     project: "Point of Sale System",
-    live: "https://shanningtatum.github.io/burgershot/",
+    live: "https://shannontao-pointofsale.netlify.app/",
     github: "https://github.com/shanningtatum/pointOfSale",
     img: "./assets/pos-tablet.png",
-    desc: "A simple point of sale system for a restaurant. Users can add items to a cart, increase or decrease the quantity, apply a discount to the purchase.",
+    desc: "A simple point of sale system for a restaurant. Users can add items to a cart, increase or decrease the quantity, and apply a discount to the purchase.",
     tool: {
       tool1: "HTML",
       tool2: "SASS",

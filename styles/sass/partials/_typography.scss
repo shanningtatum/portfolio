@@ -87,6 +87,7 @@ p{
 // ABOUT ME
 
 section h2{
+    position: relative;
     font-size:clamp(2rem, 4vw, 3rem);
     font-weight:normal;
 }
@@ -102,4 +103,34 @@ section h2{
 // CONTACT 
 .contact h2{
     color:$white;
+}
+
+.aboutMeRightDiv h2::before{
+    position: absolute;
+    content:"Who Are You?";
+    font-family:$sansSerifFont;
+    top:-20px;
+    font-size:0.35em;
+    color:$purple;
+    text-transform:uppercase;
+}
+
+.portfolio .wrapper h2::before{
+    position: absolute;
+    content:"What have you made?";
+    font-family:$sansSerifFont;
+    top:-20px;
+    font-size:0.35em;
+    color:$purple;
+    text-transform:uppercase;
+}
+
+.contactHeader h2::before{
+    position: absolute;
+    content:"how can i contact you?";
+    font-family:$sansSerifFont;
+    top:-20px;
+    font-size:0.35em;
+    color:$purple;
+    text-transform:uppercase;
 }
