@@ -386,7 +386,7 @@ h2 {
 
 p {
   font-family: "Inter", sans-serif;
-  font-size: clamp(0.7rem, 2vw, 0.9rem);
+  font-size: 0.9rem;
   color: #818AA3;
   line-height: 1.6rem;
 }
