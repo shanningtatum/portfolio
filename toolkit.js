@@ -1,6 +1,11 @@
 const app = {};
 // Query the toolKitContainer element
 const toolKitContainer = document.querySelector(".toolKitContainer ul");
+const hamburgerMenu = document.querySelector(".hamburgerMenu");
+
+hamburgerMenu.addEventListener("click", function () {
+  document.querySelector("nav .wrapper ul").classList.toggle("active");
+});
 
 toolKit.forEach((item) => {
   const liElement = document.createElement("li");
@@ -23,6 +28,7 @@ toolKit.forEach((item) => {
 
 // Query the displayPortfolio element
 const displayPortfolio = document.querySelector(".displayPortfolio ul");
+
 app.renderPortfolio = () => {
   portfolio.forEach((item) => {
     // 1

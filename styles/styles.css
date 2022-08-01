@@ -386,7 +386,7 @@ h2 {
 
 p {
   font-family: "Inter", sans-serif;
-  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  font-size: clamp(0.7rem, 2vw, 0.9rem);
   color: #818AA3;
   line-height: 1.6rem;
 }
@@ -437,8 +437,6 @@ header .headerRight {
 }
 header .introDiv {
   margin: auto 10%;
-  -webkit-animation: fadeUp 2s forwards;
-          animation: fadeUp 2s forwards;
 }
 header .scrollIcon {
   position: relative;
@@ -492,6 +490,9 @@ nav {
   width: 15%;
   background-color: #FFF;
   border-right: 1px rgba(162, 59, 114, 0.3) solid;
+}
+nav .hamburgerMenu {
+  display: none;
 }
 nav .wrapper {
   display: -webkit-box;
@@ -759,20 +760,13 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
           transform: scale(1.2);
 }
 .portfolioLi .projectText {
-  border: 2px orange solid;
   -ms-flex-preferred-size: 70%;
       flex-basis: 70%;
 }
-.portfolioLi .projectText h3 {
-  border: 2px yellow solid;
-  padding: 20px;
-}
-.portfolioLi .projectText p {
-  border: 2px green solid;
+.portfolioLi .projectText h3, .portfolioLi .projectText p {
   padding: 20px;
 }
 .portfolioLi .projectLinks {
-  border: 2px red solid;
   width: 50%;
   margin: 0 auto;
   display: -webkit-box;
@@ -971,4 +965,92 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
 }
 .contact .contactForm ul li:nth-child(4) input, .contact .contactForm ul li:nth-child(4) label {
   margin-left: 20px;
+}
+
+@media (max-width: 810px) {
+  header .headerRight {
+    width: 100%;
+    margin-left: 0;
+  }
+  header .scrollIcon {
+    margin-left: auto;
+  }
+  nav {
+    width: 100%;
+    height: 10vh;
+    background-color: #FFF;
+    z-index: 20;
+  }
+  nav .wrapper {
+    height: 10vh !important;
+    width: 100%;
+  }
+  nav .wrapper ul {
+    -webkit-transform: translateX(-500px);
+            transform: translateX(-500px);
+    position: absolute;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    top: 10vh;
+    left: 0;
+    background-color: #FFF;
+    border: 2px red solid;
+    width: 50%;
+    margin: 0;
+    height: 90vh;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+  }
+  nav .wrapper ul li {
+    text-align: center;
+  }
+  nav .wrapper ul a::before {
+    display: none;
+  }
+  nav .wrapper ul a:hover, nav .wrapper ul a:focus {
+    padding: 0;
+  }
+  nav .wrapper ul.active {
+    -webkit-transform: translateX(0px) !important;
+            transform: translateX(0px) !important;
+  }
+  nav .hamburgerMenu {
+    cursor: pointer;
+    display: block;
+    font-size: 2rem;
+    position: absolute;
+    top: 55%;
+    height: 10px;
+    width: 10px;
+    right: 10%;
+    color: #202020;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+  }
+  nav .hamburgerMenu:hover .lineOne::before, nav .hamburgerMenu:hover .lineTwo::before, nav .hamburgerMenu:hover .lineThree::before, nav .hamburgerMenu:focus .lineOne::before, nav .hamburgerMenu:focus .lineTwo::before, nav .hamburgerMenu:focus .lineThree::before {
+    background-color: #A23B72;
+  }
+  nav .hamburgerMenu .lineOne::before, nav .hamburgerMenu .lineTwo::before, nav .hamburgerMenu .lineThree::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    background-color: #202020;
+    height: 3px;
+    border-radius: 10px;
+  }
+  nav .hamburgerMenu .lineTwo::before {
+    top: -10px;
+  }
+  nav .hamburgerMenu .lineThree::before {
+    top: -20px;
+  }
+  .socialLinks {
+    top: 30%;
+  }
+  .navFooter {
+    display: none;
+  }
 }

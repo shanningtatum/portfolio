@@ -81,7 +81,7 @@ const portfolio = [
   },
 ];
 
-// List of Skills Array
+// List of Tools
 const toolKit = [
   {
     img: "./assets/html.png",

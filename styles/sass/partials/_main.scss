@@ -131,28 +131,18 @@
     }
     
     .projectText{
-        border:2px orange solid;
         flex-basis:70%;
 
-        h3{
-            border:2px yellow solid;
-            padding:20px;
-        }
-
-        p{
-            border:2px green solid;
-
+        h3, p{
             padding:20px;
         }
     }
 
     .projectLinks{
-        border:2px red solid;
         width:50%;
         margin:0 auto;
         display:flex;
         padding:20px;
-
         justify-content: space-evenly;
         a{
             font-family:$sansSerifFont;
