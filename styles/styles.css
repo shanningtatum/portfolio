@@ -235,31 +235,31 @@ html {
 ::-webkit-input-placeholder {
   font-family: "Inter", sans-serif;
   font-size: 0.8rem;
-  color: #818AA3;
+  color: rgba(129, 138, 163, 0.7);
 }
 
 ::-moz-placeholder {
   font-family: "Inter", sans-serif;
   font-size: 0.8rem;
-  color: #818AA3;
+  color: rgba(129, 138, 163, 0.7);
 }
 
 :-ms-input-placeholder {
   font-family: "Inter", sans-serif;
   font-size: 0.8rem;
-  color: #818AA3;
+  color: rgba(129, 138, 163, 0.7);
 }
 
 ::-ms-input-placeholder {
   font-family: "Inter", sans-serif;
   font-size: 0.8rem;
-  color: #818AA3;
+  color: rgba(129, 138, 163, 0.7);
 }
 
 ::placeholder {
   font-family: "Inter", sans-serif;
   font-size: 0.8rem;
-  color: #818AA3;
+  color: rgba(129, 138, 163, 0.7);
 }
 
 @-webkit-keyframes scrollDown {
@@ -452,7 +452,10 @@ header .wrapper {
   display: flex;
 }
 header .headerRight {
-  background-color: #FAFAFA;
+  background-image: url("./../assets/background.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: right;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -628,6 +631,7 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
+  z-index: 10;
 }
 .socialLinks ul {
   list-style: none;

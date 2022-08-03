@@ -12,5 +12,5 @@ html{
 ::placeholder{
     font-family:$sansSerifFont;
     font-size:0.8rem;
-    color:$grey;
+    color:rgba($color:$grey, $alpha:0.7);
 }
