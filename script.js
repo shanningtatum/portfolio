@@ -111,10 +111,9 @@ app.renderPortfolio = () => {
   });
 };
 
+// code from coding snow on youtube
 app.reveal = () => {
   const reveals = document.querySelectorAll(".reveal");
-
-  console.log("hello");
 
   for (let i = 0; i < reveals.length; i++) {
     const windowHeight = window.innerHeight;
