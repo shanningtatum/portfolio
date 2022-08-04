@@ -685,16 +685,17 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
   background-color: rgba(162, 59, 114, 0.4);
   width: 60px;
   height: 60px;
-  color: #FFF;
+  color: rgba(255, 255, 255, 0.4);
   border-radius: 50%;
   cursor: pointer;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 .scrollToTop i {
   margin: auto;
 }
 .scrollToTop:hover, .scrollToTop:focus {
+  color: #FFF;
   background-color: #A23B72;
 }
 .scrollToTop.active {
