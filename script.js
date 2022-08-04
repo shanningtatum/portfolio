@@ -66,7 +66,7 @@ app.renderPortfolio = () => {
     const githubLink = document.createElement("a");
 
     // assigning class names, sources, values to elements created
-    liElement.className = "portfolioLi";
+    liElement.className = "portfolioLi reveal";
     containerDiv.className = "portfolioContainer";
     portfolioTool.className = "portfolioTool";
     projectImageDiv.className = "projectImage";
@@ -111,7 +111,30 @@ app.renderPortfolio = () => {
   });
 };
 
+app.reveal = () => {
+  const reveals = document.querySelectorAll(".reveal");
+
+  console.log("hello");
+
+  for (let i = 0; i < reveals.length; i++) {
+    const windowHeight = window.innerHeight;
+    const revealTop = reveals[i].getBoundingClientRect().top;
+    const revealPoint = 150;
+
+    if (revealTop < windowHeight - revealPoint) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+};
+
 app.setupEventListeners = () => {
+  // general document event listener
+  document.addEventListener("scroll", function () {
+    app.reveal();
+  });
+
   // event listener for hamburger menu
   hamburgerMenu.addEventListener("click", function () {
     document.querySelector("nav .wrapper ul").classList.toggle("active");

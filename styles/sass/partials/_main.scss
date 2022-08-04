@@ -342,3 +342,16 @@
 footer {
     display:none;
 }
+
+// general reveal active class
+
+.reveal{
+    position: relative;
+    transform:translateY(150px);
+    opacity:0;
+    transition:transform 1s ease, opacity 1s ease;
+    &.active{
+        transform:translateY(0px);
+        opacity:1;
+    }
+}
