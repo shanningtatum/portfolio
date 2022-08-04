@@ -71,7 +71,7 @@ const portfolio = [
     live: "https://shanningtatum.github.io/perplexity/",
     github: "https://github.com/shanningtatum/perplexity",
     img: "./assets/perplexityMobile.png",
-    desc: "A website mock-up created for Perplexity Escape Games.",
+    desc: "A mock-up website created for Perplexity Escape Games.",
     tool: {
       tool1: "HTML",
       tool2: "CSS",
