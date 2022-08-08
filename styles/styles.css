@@ -1302,6 +1302,9 @@ footer {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .about .aboutMeRightDiv {
+    margin: 20px 40px;
+  }
   .contact .contactHeader {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
