@@ -57,6 +57,7 @@ app.renderPortfolio = () => {
     const projectImageDiv = document.createElement("div");
     const projectImage = document.createElement("img");
     const projectTextDiv = document.createElement("div");
+    const projectAlt = document.createAttribute("alt");
     // >>
     const h3Element = document.createElement("h3");
     const projectDescriptionText = document.createElement("p");
@@ -70,7 +71,9 @@ app.renderPortfolio = () => {
     containerDiv.className = "portfolioContainer";
     portfolioTool.className = "portfolioTool";
     projectImageDiv.className = "projectImage";
+    projectAlt.value = `A device mock-up image for ${item.project} project`;
     projectImage.src = item.img;
+    projectImage.setAttributeNode(projectAlt);
     projectTextDiv.className = "projectText";
     projectLinks.className = "projectLinks";
     projectDescriptionText.textContent = item.desc;
