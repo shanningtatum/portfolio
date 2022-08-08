@@ -664,8 +664,8 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
           align-items: center;
   background-color: rgba(162, 59, 114, 0.1);
   border-radius: 50%;
-  width: 70px;
-  height: 70px;
+  width: clamp(60px, 12vw, 70px);
+  height: clamp(60px, 12vw, 70px);
   color: #818AA3;
   -webkit-transition: background-color 0.3s, color 0.3s;
   transition: background-color 0.3s, color 0.3s;
