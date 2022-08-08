@@ -733,7 +733,7 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
   position: relative;
 }
 .about .aboutMeRightDiv {
-  margin: 40px;
+  margin: 0 auto;
 }
 
 .toolKit {
