@@ -725,6 +725,8 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
   display: flex;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
+}
+.about .toolKit {
   padding-bottom: 40px;
 }
 .about .aboutMeLeftDiv, .about .aboutMeRightDiv {
@@ -733,7 +735,8 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
   position: relative;
 }
 .about .aboutMeRightDiv {
-  margin: 0 auto;
+  margin: 0px auto;
+  padding: 40px 0;
 }
 
 .toolKit {
@@ -834,6 +837,12 @@ nav .wrapper .navFooter a:focus, nav .wrapper .navFooter a:hover {
           box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 .portfolioLi .projectImage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   -ms-flex-preferred-size: 30%;
