@@ -134,6 +134,10 @@ const toolKit = [
     tool: "Firebase",
   },
   {
+    img: "./assets/accessibility.png",
+    tool: "Accessibility",
+  },
+  {
     img: "./assets/photoshop.png",
     tool: "Photoshop",
   },
