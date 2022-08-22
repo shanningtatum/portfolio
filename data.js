@@ -1,6 +1,20 @@
 // List of Portfolio Projects
 const portfolio = [
   {
+    project: "Bill Splitter",
+    live: "https://shannontao-project3-production.netlify.app/",
+    github: "https://github.com/shanningtatum/shannontao-project3",
+    img: "./assets/guberEats.png",
+    desc: "A bill splitter for a popular food delivery service app made using React. Users can enter the name of the people they will be splitting the bill with, their orders and price, additional fees, and the bill will be split accordingly. No more having to manually calculate how much someone owes you!",
+    tool: {
+      tool1: "HTML",
+      tool2: "CSS",
+      tool3: "JavaScript",
+      tool4: "React JS",
+      tool5: "Firebase",
+    },
+  },
+  {
     project: "Perplexity Digital Scoreboard",
     live: "https://peg-leaderboard.netlify.app/",
     github: "https://github.com/shanningtatum/scoreboard",

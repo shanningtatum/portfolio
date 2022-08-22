@@ -175,22 +175,22 @@
 
 
 // PORTFOLIO IMAGE COLOURS 
-.portfolioLi:nth-child(1) .projectImage {
+.portfolioLi:nth-child(n) .projectImage {
     background-color:lightcoral;
 }
-.portfolioLi:nth-child(2) .projectImage {
+.portfolioLi:nth-child(2n) .projectImage {
     background-color:lightblue;
 }
-.portfolioLi:nth-child(3) .projectImage {
+.portfolioLi:nth-child(3n) .projectImage {
     background-color:mediumaquamarine;
 }
-.portfolioLi:nth-child(4) .projectImage {
+.portfolioLi:nth-child(4n) .projectImage {
     background-color:plum;
 }
-.portfolioLi:nth-child(5) .projectImage {
+.portfolioLi:nth-child(5n) .projectImage {
     background-color:palegoldenrod;
 }
-.portfolioLi:nth-child(6) .projectImage {
+.portfolioLi:nth-child(6n) .projectImage {
     background-color:lightsalmon;
 }
 
