@@ -1,6 +1,20 @@
 // List of Portfolio Projects
 const portfolio = [
   {
+    project: "Shopper Mapper",
+    live: "https://shopper-mapper.netlify.app/",
+    github: "https://github.com/shopper-mapper-cohort42/project-04",
+    img: "./assets/project4-desktop-mobile.png",
+    desc: "This was a group project based on a client design: A map app using the MapQuest API that looks for the most average shop results for the user based on their location. Users input their location and enter what shops they're looking for. The app will render results and the user can also get directions to their destination based on their transportation method and adjust the search radius.",
+    tool: {
+      tool1: "HTML",
+      tool2: "CSS",
+      tool3: "JavaScript",
+      tool4: "React JS",
+      tool5: "API",
+    },
+  },
+  {
     project: "Bill Splitter",
     live: "https://shannontao-project3-production.netlify.app/",
     github: "https://github.com/shanningtatum/shannontao-project3",
